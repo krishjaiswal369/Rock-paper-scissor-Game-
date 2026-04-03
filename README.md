@@ -1,52 +1,77 @@
-## README: Rock Paper Scissors CLI (C Edition)
+This is a solid C implementation of the classic Rock Paper Scissors game. It handles user input validation, dynamic round selection, and persistent scoring well.
 
-This repository contains a robust, command-line interface (CLI) implementation of the classic **Rock, Paper, Scissors** game written in C. It features personalized gameplay, customizable round counts, and input validation to ensure a smooth user experience.
-
----
-
-### ## Key Features
-
-* **Personalized Experience**: The game greets you by name and tracks your specific score against the CPU.
-* **Flexible Game Length**: Choose between a quick 3-round match, a 5-round battle, or define your own custom number of rounds.
-* **Input Validation**: Includes logic to handle invalid inputs (like letters or out-of-range numbers) without crashing the program.
-* **Replayability**: After a tournament ends, you can immediately start a new session without restarting the application.
-* **Visual Flair**: Utilizes emojis and clear formatting to make the terminal output engaging.
+Below is a comprehensive `README.md` file you can include in your project repository.
 
 ---
 
-### ## How to Run
+# 🪨 Paper 🧻 Scissors ✂️ (C Language Edition)
 
-1.  **Prerequisites**: Ensure you have a C compiler installed, such as `gcc`.
-2.  **Compilation**: Open your terminal and run:
-    ```bash
-    gcc "Rock paper scissor game.c" -o rps_game
-    ```
-3.  **Execution**: Run the compiled binary:
-    ```bash
-    ./rps_game
-    ```
+A classic, console-based implementation of **Rock Paper Scissors** written in C. This version features personalized gameplay, customizable round lengths, and robust input validation to ensure a smooth user experience.
 
----
+## 🚀 Features
 
-### ## Game Logic & Rules
-
-The game follows the standard rules of Rock, Paper, Scissors:
-* **Rock** beats **Scissors**.
-* **Paper** beats **Rock**.
-* **Scissors** beats **Paper**.
-
-The CPU's moves are randomized using the `rand()` function seeded with the current time to ensure a different experience every game.
+* **Personalization:** Enter your name to see customized messages throughout the match.
+* **Flexible Match Lengths:** Choose between a Quick Match (3 rounds), a Standard Match (5 rounds), or a Custom length.
+* **Input Validation:** The game handles non-numeric inputs and out-of-range choices without crashing.
+* **Score Tracking:** Real-time score updates after every round and a final tournament summary.
+* **Replayability:** Option to restart a new game immediately after finishing a match.
 
 ---
 
-### ## Code Structure
+## 🛠️ How to Compile and Run
 
-| Component | Description |
+To run this game, you need a C compiler (like `gcc` or `clang`).
+
+### 1. Compilation
+Open your terminal or command prompt and navigate to the folder containing the file:
+```bash
+gcc rock_paper_scissors.c -o rps_game
+```
+
+### 2. Execution
+Run the compiled program:
+```bash
+./rps_game
+```
+
+---
+
+## 🎮 How to Play
+
+1.  **Enter your Name:** Start by introducing yourself to the CPU.
+2.  **Select Match Length:** Pick how many rounds you want the tournament to last.
+3.  **Make Your Move:** In every round, enter a number:
+    * `1` for **Rock**
+    * `2` for **Paper**
+    * `3` for **Scissors**
+4.  **Win the Match:** The player with the highest score at the end of the specified rounds is crowned the champion!
+
+---
+
+## 🧠 Logic Breakdown
+
+The game logic follows the standard rules:
+* **Rock** beats **Scissors**
+* **Paper** beats **Rock**
+* **Scissors** beats **Paper**
+
+The CPU move is generated using a pseudo-random number generator:
+```c
+computerChoice = (rand() % 3) + 1;
+```
+
+---
+
+## 📝 Code Structure
+
+| Function | Description |
 | :--- | :--- |
-| **`main()`** | Handles the primary game loop, name entry, and round selection. |
-| **`playRound()`** | Manages individual round logic, compares choices, and updates scores. |
-| **`showChoice()`** | A helper function to print the text and emoji representation of a move. |
+| `main()` | Handles the game loop, round selection, and final scoring. |
+| `playRound()` | Logic for a single round: gets user input, generates CPU move, and determines the winner. |
+| `showChoice()` | A helper function to translate numeric inputs into emoji-friendly text. |
 
 ---
 
-Would you like me to add a section on how to contribute or perhaps help you expand the game to include "Rock Paper Scissors Lizard Spock"?
+## 🔧 Requirements
+* A C99-compliant compiler.
+* Standard Libraries: `stdio.h`, `stdlib.h`, `time.h`, `locale.h`, `ctype.h`.
