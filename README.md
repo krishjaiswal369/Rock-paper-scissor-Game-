@@ -1,107 +1,52 @@
-# 🎮 Rock 🪨 Paper 🧻 Scissors ✂️ Game
+## README: Rock Paper Scissors CLI (C Edition)
 
-A fun, interactive **C program** that lets you play Rock–Paper–Scissors against the CPU.  
-The game supports multiple rounds, custom round selection, and personalized player names.
-
----
-
-## ✨ Features
-- 🧑 Enter your **name** to personalize the game.
-- 🔄 Choose the number of rounds:
-  - 3 rounds
-  - 5 rounds
-  - Custom number of rounds
-- 🎲 Random CPU moves using `rand()`.
-- 🏆 Keeps track of scores across rounds.
-- 🎉 Displays final results with fun emojis.
-- 🔁 Option to replay the game.
+This repository contains a robust, command-line interface (CLI) implementation of the classic **Rock, Paper, Scissors** game written in C. It features personalized gameplay, customizable round counts, and input validation to ensure a smooth user experience.
 
 ---
 
-## 📂 File Structure
-rock_paper_scissors.c   # Main source code
-README.md               # Documentation
+### ## Key Features
 
-Code
+* **Personalized Experience**: The game greets you by name and tracks your specific score against the CPU.
+* **Flexible Game Length**: Choose between a quick 3-round match, a 5-round battle, or define your own custom number of rounds.
+* **Input Validation**: Includes logic to handle invalid inputs (like letters or out-of-range numbers) without crashing the program.
+* **Replayability**: After a tournament ends, you can immediately start a new session without restarting the application.
+* **Visual Flair**: Utilizes emojis and clear formatting to make the terminal output engaging.
 
 ---
 
-## ⚙️ How to Compile and Run
-1. Open a terminal and navigate to the project folder.
-2. Compile the program using `gcc`:
-   ```bash
-   gcc rock_paper_scissors.c -o rps
-Run the executable:
+### ## How to Run
 
-bash
-./rps
-🕹️ Gameplay Instructions
-Enter your name when prompted.
+1.  **Prerequisites**: Ensure you have a C compiler installed, such as `gcc`.
+2.  **Compilation**: Open your terminal and run:
+    ```bash
+    gcc "Rock paper scissor game.c" -o rps_game
+    ```
+3.  **Execution**: Run the compiled binary:
+    ```bash
+    ./rps_game
+    ```
 
-Select the number of rounds (3, 5, or custom).
+---
 
-For each round, choose:
+### ## Game Logic & Rules
 
-1 → Rock 🪨
+The game follows the standard rules of Rock, Paper, Scissors:
+* **Rock** beats **Scissors**.
+* **Paper** beats **Rock**.
+* **Scissors** beats **Paper**.
 
-2 → Paper 🧻
+The CPU's moves are randomized using the `rand()` function seeded with the current time to ensure a different experience every game.
 
-3 → Scissors ✂️
+---
 
-The CPU will randomly select its move.
+### ## Code Structure
 
-Scores are updated after each round.
+| Component | Description |
+| :--- | :--- |
+| **`main()`** | Handles the primary game loop, name entry, and round selection. |
+| **`playRound()`** | Manages individual round logic, compares choices, and updates scores. |
+| **`showChoice()`** | A helper function to print the text and emoji representation of a move. |
 
-At the end, the final winner is announced.
+---
 
-📖 Example Run
-Code
-=== WELCOME TO ROCK 🪨 PAPER 🧻 SCISSORS ✂️ ===
-Enter your name, hero: Krish
-
-Hello, Krish! How many rounds would you like to play?
-1. 3 Rounds
-2. 5 Rounds
-3. Custom Number (N)
-Selection: 1
-
---- ROUND 1 of 3 ---
-Krish, choose your move (1:Rock, 2:Paper, 3:Scissors): 1
-Krish: Rock 🪨
-CPU: Scissors ✂️
-Result: Krish wins this round! 🎉
-🛠️ Dependencies
-Standard C libraries:
-
-<stdio.h>
-
-<stdlib.h>
-
-<time.h>
-
-<locale.h>
-
-<ctype.h>
-
-No external dependencies required.
-
-🚀 Future Enhancements
-Add multiplayer mode.
-
-Track win history across sessions.
-
-Implement graphical UI version.
-
-👋 Credits
-Developed as a simple C programming project to practice:
-
-Input validation
-
-Random number generation
-
-Loops and conditionals
-
-Function usage
-Code
-
-Would you like me to also create a **student
+Would you like me to add a section on how to contribute or perhaps help you expand the game to include "Rock Paper Scissors Lizard Spock"?
