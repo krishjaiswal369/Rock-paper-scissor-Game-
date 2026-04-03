@@ -1,9 +1,3 @@
-This is a solid C implementation of the classic Rock Paper Scissors game. It handles user input validation, dynamic round selection, and persistent scoring well.
-
-Below is a comprehensive `README.md` file you can include in your project repository.
-
----
-
 # 🪨 Paper 🧻 Scissors ✂️ (C Language Edition)
 
 A classic, console-based implementation of **Rock Paper Scissors** written in C. This version features personalized gameplay, customizable round lengths, and robust input validation to ensure a smooth user experience.
